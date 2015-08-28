@@ -2,7 +2,7 @@ require 'test_helper'
 
 class EventsControllerTest < ActionController::TestCase
   setup do
-    @event = events(:one)
+    @event = events(:two)
   end
 
   test "should get index" do
@@ -44,6 +44,6 @@ class EventsControllerTest < ActionController::TestCase
       delete :destroy, id: @event
     end
 
-    assert_redirected_to events_path
+    assert_redirected_to root_path
   end
 end
